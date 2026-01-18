@@ -1,0 +1,2 @@
+12
+it is not a perfect number

@@ -1,0 +1,293 @@
+/*
+=====================================================
+📘 FOR LOOP – LOGIC BUILDING NOTES (REVISION FILE)
+=====================================================
+
+🟢 FOR LOOP STRUCTURE
+-----------------------------------------------------
+for(initialization; condition; update) {
+    // logic
+}
+
+🔑 REMEMBER:
+- Best when number of iterations is KNOWN
+- Initialization → runs once
+- Condition → checked every iteration
+- Update → automatic step change
+*/
+
+/* =====================================================
+   🟢 1. PRINTING NUMBERS
+   ===================================================== */
+
+// Print numbers from 1 to 10
+/*
+for(int i = 1; i <= 10; i++) {
+    cout << i << endl;
+}
+*/
+
+// Print numbers from 10 to 1 (reverse)
+/*
+for(int i = 10; i >= 1; i--) {
+    cout << i << endl;
+}
+*/
+
+/* =====================================================
+   🟢 2. EVEN & ODD NUMBERS
+   ===================================================== */
+
+// Print EVEN numbers from 1 to 100
+/*
+for(int i = 2; i <= 100; i += 2) {
+    cout << i << endl;
+}
+*/
+
+// Print ODD numbers from 1 to 100
+/*
+for(int i = 1; i <= 100; i += 2) {
+    cout << i << endl;
+}
+*/
+
+/*
+🔑 REMEMBER:
+- Even → start from 2
+- Odd → start from 1
+- Jump by +2
+*/
+
+/* =====================================================
+   🟢 3. MULTIPLICATION TABLE
+   ===================================================== */
+
+// Print table of n
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= 10; i++) {
+    cout << n << " x " << i << " = " << n * i << endl;
+}
+*/
+
+/* =====================================================
+   🟢 4. SUM BASED PROBLEMS
+   ===================================================== */
+
+// Sum of first n natural numbers
+/*
+int n;
+cin >> n;
+
+int sum = 0;
+for(int i = 1; i <= n; i++) {
+    sum += i;
+}
+cout << sum << endl;
+*/
+
+// Sum of EVEN numbers up to n
+/*
+int n;
+cin >> n;
+
+int sum = 0;
+for(int i = 2; i <= n; i += 2) {
+    sum += i;
+}
+cout << sum << endl;
+*/
+
+// Sum of ODD numbers up to n
+/*
+int n;
+cin >> n;
+
+int sum = 0;
+for(int i = 1; i <= n; i += 2) {
+    sum += i;
+}
+cout << sum << endl;
+*/
+
+/* =====================================================
+   🟢 5. FACTORIAL (FOR LOOP)
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+int fact = 1;
+for(int i = 1; i <= n; i++) {
+    fact *= i;
+}
+cout << fact << endl;
+*/
+
+/*
+🔑 GOLDEN RULE:
+- Sum → initialize with 0
+- Product → initialize with 1
+*/
+
+
+
+
+/*
+=====================================================
+⭐ NESTED LOOP & PATTERN NOTES (REVISION FILE)
+=====================================================
+
+🟢 NESTED LOOP STRUCTURE
+-----------------------------------------------------
+for(row loop) {
+    for(column loop) {
+        // print
+    }
+}
+
+🔑 OUTER LOOP → ROWS
+🔑 INNER LOOP → COLUMNS
+*/
+
+/* =====================================================
+   ⭐ 1. PRINT SQUARE PATTERN (n x n)
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= n; i++) {
+    for(int j = 1; j <= n; j++) {
+        cout << "* ";
+    }
+    cout << endl;
+}
+*/
+
+/* =====================================================
+   ⭐ 2. INCREASING TRIANGLE
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= n; i++) {
+    for(int j = 1; j <= i; j++) {
+        cout << "* ";
+    }
+    cout << endl;
+}
+*/
+
+/*
+Output (n=4):
+*
+* *
+* * *
+* * * *
+*/
+
+/* =====================================================
+   ⭐ 3. DECREASING TRIANGLE
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = n; i >= 1; i--) {
+    for(int j = 1; j <= i; j++) {
+        cout << "* ";
+    }
+    cout << endl;
+}
+*/
+
+/* =====================================================
+   ⭐ 4. RIGHT-ALIGNED TRIANGLE
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= n; i++) {
+    // spaces
+    for(int s = 1; s <= n - i; s++) {
+        cout << "  ";
+    }
+    // stars
+    for(int j = 1; j <= i; j++) {
+        cout << "* ";
+    }
+    cout << endl;
+}
+*/
+
+/* =====================================================
+   ⭐ 5. PYRAMID PATTERN
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= n; i++) {
+    for(int s = 1; s <= n - i; s++) {
+        cout << " ";
+    }
+    for(int j = 1; j <= 2*i - 1; j++) {
+        cout << "*";
+    }
+    cout << endl;
+}
+*/
+
+/* =====================================================
+   ⭐ 6. NUMBER TRIANGLE
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= n; i++) {
+    for(int j = 1; j <= i; j++) {
+        cout << j << " ";
+    }
+    cout << endl;
+}
+*/
+
+/* =====================================================
+   ⭐ 7. SAME NUMBER PER ROW
+   ===================================================== */
+/*
+int n;
+cin >> n;
+
+for(int i = 1; i <= n; i++) {
+    for(int j = 1; j <= i; j++) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+*/
+
+/* =====================================================
+   🔥 MASTER PATTERN MEMORY RULE
+   =====================================================
+
+Rows    → outer loop
+Columns → inner loop
+Spaces  → before stars/numbers
+Stars   → depend on row number
+
+Increasing  → j <= i
+Decreasing  → j <= n-i
+Pyramid     → 2*i - 1 stars
+
+=====================================================
+END OF FOR LOOP & NESTED LOOP NOTES
+=====================================================
+*/

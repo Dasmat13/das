@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
 
     //Reverse the given number and print the reversed value
 
@@ -119,4 +118,7 @@ int main(){
     // }
 
     //
-}
+
+    //function 
+
+   

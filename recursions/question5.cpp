@@ -15,4 +15,4 @@ int main(){
     int n;
     cin >> n;
     f(1,n);
-}
+} 

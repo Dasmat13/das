@@ -1,23 +1,23 @@
-#include<bits/stdc++.h>
-using namespace std;
- int main(){
-    string s;
-    cin >> s;
-    //pre compute
-    int hash[26] = {0};
-    for(int i =0 ; i< s.size(); i++){
-        hash[s[i] - 'a']++;
-    }
-    int q;
-    cin >> q;
-    while(q--){
-        char c;
-        cin >> c;
-        //fetch 
-        cout << "the number of time " << c << " " << "comes: " << hash[c-'a'] << endl;
-    }
-    return 0;
- }
+// #include<bits/stdc++.h>
+// using namespace std;
+//  int main(){
+//     string s;
+//     cin >> s;
+//     //pre compute
+//     int hash[26] = {0};
+//     for(int i =0 ; i< s.size(); i++){
+//         hash[s[i] - 'a']++;
+//     }
+//     int q;
+//     cin >> q;
+//     while(q--){
+//         char c;
+//         cin >> c;
+//         //fetch 
+//         cout << "the number of time " << c << " " << "comes: " << hash[c-'a'] << endl;
+//     }
+//     return 0;
+//  }
 
  #include<bits/stdc++.h>
 using namespace std;
@@ -55,7 +55,7 @@ int main(){
 
         // Fetch frequency in O(1)
         cout << "the number of time " << c 
-             << " comes: " << hash[c - 'a'] << endl;
+             << " comes: " << hash[c - 'a'] << endl;;;;;
     }
 
     // ================= STEP 4: END =================
